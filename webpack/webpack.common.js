@@ -1,13 +1,20 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-    entry: "./src/three.js",
+    entry: "./src/three_door.js",
     output: {
         assetModuleFilename: "images/[hash].[ext]"
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/template.html'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, '../static') }
+            ]
         })
     ],
     module: {   
