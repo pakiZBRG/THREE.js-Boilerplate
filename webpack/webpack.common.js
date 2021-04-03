@@ -3,7 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: "./src/three_lights.js",
+    entry: "./src/three_shadows.js",
     output: {
         assetModuleFilename: "images/[hash].[ext]"
     },
